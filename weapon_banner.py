@@ -5,6 +5,7 @@ FIVE_STAR_WIN_RATE = 0.75
 EPITOMIZED_PATH_MAX = 2
 guaranteed = False
 epitomized_path_count = 0
+
 five_star_pity = 0
 
 featured_list = ["Mistsplitter Reforged", "Skyward Spine"]
@@ -56,12 +57,12 @@ def gacha():
 history_total = []
 agg_pull_history = []  # Stats
 
-# SET NO. OF SIMULATIONS HERE (default of 10k for convenience, can be 100k for more accuracy)
+# TODO: SET NO. OF SIMULATIONS HERE (default of 10k for convenience, can be 100k for more accuracy)
 for _ in range(100000):
     total_pulls = 0  # total pulls that it took to get a 5 star
     featured_5 =  {"Mistsplitter Reforged" : 0, "Skyward Spine" : 0}
 
-    # This is True for my current situation (each simulation needs to be start with this True). If not, just comment it out.
+    # TODO: SET THIS (This is True for my current situation as each simulation needs to be start with this True. If not, just comment it out.)
     guaranteed = True  
 
     #current = []  # DEBUG
@@ -89,7 +90,7 @@ print("Avg. number of pulls required to get Mistsplitter Reforged:", sum(history
 print("Avg. number of primogems required to get Mistsplitter Reforged:", sum(history_total)/len(history_total) * 160)
 
 
-# Statistics
+# Statistics | Verify: https://genshin-impact.fandom.com/wiki/Wishes/Expanded_Wish_Probabilities, https://paimon.moe/wish/tally?id=400020
 print("\n--- Statistics ---")
 print(f"Total pulls: {len(agg_pull_history)}")
 non_5_star_count = agg_pull_history.count("some 3 or 4 star thingy")
