@@ -5,7 +5,6 @@ FIVE_STAR_WIN_RATE = 0.75
 EPITOMIZED_PATH_MAX = 2
 guaranteed = False
 epitomized_path_count = 0
-
 five_star_pity = 0
 
 featured_list = ["Mistsplitter Reforged", "Skyward Spine"]
