@@ -2,6 +2,8 @@ import random
 #from pprint import pprint  # DEBUG
 
 FIVE_STAR_WIN_RATE = 0.75
+FIVE_STAR_BASE_PROBABILITY = 0.007
+MAX_PITY_WITHOUT_FIVE_STAR = 79
 EPITOMIZED_PATH_MAX = 2
 guaranteed = False
 epitomized_path_count = 0
@@ -46,7 +48,7 @@ def get_five_star():
 def gacha():
     global five_star_pity
     gacha = random.random()
-    if gacha < 0.007 or five_star_pity == 79:
+    if gacha < FIVE_STAR_BASE_PROBABILITY or five_star_pity == MAX_PITY_WITHOUT_FIVE_STAR:
         five_star_pity = 0
         return get_five_star()
     else:
